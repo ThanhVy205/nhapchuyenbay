@@ -33,8 +33,9 @@ void nhapthongtinbay(chuyenbay& mb)
 void Nhapmang(chuyenbay mb[], int n)
 {
 
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < n; i++) {
 		nhapthongtinbay(mb[i]);
+	}
 }
 
 void xuatchuyenbay(chuyenbay mb)
@@ -49,8 +50,9 @@ void xuatmang(chuyenbay mb[], int n)
 {
 
 	printf("Cac chuyen bay da nhap:");
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < n; i++) {
 		xuatchuyenbay(mb[i]);
+	}
 }
 //2.	Hãy cho biết chuyến bay đó là chuyến bay dài hay chuyến bay ngắn dựa vào thông tin thời lượng bay. Nếu thời lượng bay>600 phút thì chuyến bay dài, ngược lại là chuyến bay ngắn.
 void kiemtra(chuyenbay mb[], int n)
@@ -101,8 +103,10 @@ void main()
 {
 	chuyenbay mb[50];
 	int luachon, n;
+	printf("\nNhap so luong chuyen bay:");
+	scanf_s("%d", &n);
 	do {
-		printf("1.Nhap cac chuyen bay");
+		printf("\n1.Nhap cac chuyen bay");
 		printf("\n2.Kiem tra chuyen bay dai ngan");
 		printf("\n3.Danh sach gom n chuyen bay");
 		printf("\n4.Dem trong chuyen bay co bao nhieu chuyen xuat phat tu Ha Noi");
@@ -110,8 +114,6 @@ void main()
 		printf("\n6.Sap xep cac chuyen bay bang Interchange Sort");
 		printf("\n7.Nhap vao danh sach co noi den duoc uu tien khuyen mai. Liet ke nhung chuyen bay co dich den nam trong danh sach khuyen mai do");
 		printf("\n0.Thoat chuong trinh");
-		printf("\nNhap so luong chuyen bay:");
-		scanf_s("%d", &n);
 		printf("\nChon chuc nang");
 		scanf_s("%d", &luachon);
 		switch (luachon)
@@ -139,5 +141,5 @@ void main()
 			return;
 			break;
 		}
-	} while (luachon <= 0 && luachon > 7);
+	} while (luachon >0  && luachon <8);
 }
