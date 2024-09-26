@@ -12,7 +12,7 @@ struct chuyenbay
 void nhapthongtinbay(chuyenbay& mb)
 {
 	printf("\nNhap ma chuyen bay (toi da 5 ki tu):");
-	fgets(mb.ma, sizeof(mb.ma), stdin);
+	scanf_s("%s", &mb.ma);
 	while (getchar() != '\n');//xoa ki tu xuong dong
 	printf("Nhap ngay bay :");
 	scanf_s("%d", &mb.ngay);
@@ -23,10 +23,11 @@ void nhapthongtinbay(chuyenbay& mb)
 	printf("\nNhap thoi luong bay du kien:");
 	scanf_s("%d", &mb.timebay);
 	printf("\nNhap noi di:");
-	fgets(mb.noidi, sizeof(mb.noidi), stdin);
+	fgets(mb.ma, sizeof(mb.ma), stdin);
+	scanf_s("%s", &mb.noidi);
 	while (getchar() != '\n');//xoa ki tu xuong dong
 	printf("\nNhap noi den:");
-	fgets(mb.noiden, sizeof(mb.noiden), stdin);
+	scanf_s("%s", &mb.noiden);
 	while (getchar() != '\n');//xoa ki tu xuong dong
 }
 //3.	Nhập danh sách các chuyến bay gồm n chuyến bay.
